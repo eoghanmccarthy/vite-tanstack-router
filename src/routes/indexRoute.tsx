@@ -1,12 +1,11 @@
-import React from 'react'
 import { Route } from '@tanstack/react-router'
 
 import { rootRoute } from "./rootRoute.tsx";
 
 export const indexRoute = new Route({
-    getParentRoute: () => rootRoute,
-    path: '/',
     component: IndexComponent,
+    getParentRoute: () => rootRoute,
+    path: '/'
 })
 
 function IndexComponent() {
