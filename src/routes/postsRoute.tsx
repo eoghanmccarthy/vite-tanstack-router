@@ -1,10 +1,4 @@
-import {
-  ErrorComponent,
-  ErrorRouteProps,
-  Link,
-  Outlet,
-  Route,
-} from "@tanstack/react-router";
+import { ErrorComponent, ErrorRouteProps, Link, Outlet, Route } from "@tanstack/react-router";
 
 import { fetchPost, fetchPosts } from "../api.ts";
 
@@ -25,24 +19,30 @@ function PostsComponent() {
   return (
     <div className="p-2 flex gap-2">
       <div className="list-disc bg-gray-800/70 rounded-lg divide-y divide-green-500/30">
-        {[...posts, { id: "i-do-not-exist", title: "Non-existent Post" }]?.map(
-          (post) => {
-            return (
-              <div className="whitespace-nowrap" key={post.id}>
-                <Link
-                  activeProps={{ className: "!text-white font-bold" }}
-                  className="block py-1 px-2 text-green-300 hover:text-green-200"
-                  params={{
-                    postId: post.id,
-                  }}
-                  to={postRoute.to}
-                >
-                  <div>{post.title.slice(0, 20)}</div>
-                </Link>
-              </div>
-            );
+        {[
+          ...posts,
+          {
+            id: "i-do-not-exist",
+            title: "Non-existent Post",
           },
-        )}
+        ]?.map((post) => {
+          return (
+            <div className="whitespace-nowrap" key={post.id}>
+              <Link
+                activeProps={{
+                  className: "!text-white font-bold",
+                }}
+                className="block py-1 px-2 text-green-300 hover:text-green-200"
+                params={{
+                  postId: post.id,
+                }}
+                to={postRoute.to}
+              >
+                <div>{post.title.slice(0, 20)}</div>
+              </Link>
+            </div>
+          );
+        })}
       </div>
       <Outlet />
     </div>
