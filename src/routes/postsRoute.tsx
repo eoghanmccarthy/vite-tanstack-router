@@ -1,4 +1,10 @@
-import { ErrorComponent, ErrorRouteProps, Link, Outlet, Route } from "@tanstack/react-router";
+import {
+  ErrorComponent,
+  ErrorRouteProps,
+  Link,
+  Outlet,
+  Route,
+} from "@tanstack/react-router";
 
 import { fetchPost, fetchPosts } from "../api.ts";
 
