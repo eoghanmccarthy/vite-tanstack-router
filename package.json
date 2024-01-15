@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@eoghanmccarthy/css-reset": "github:eoghanmccarthy/css-reset",
     "@tanstack/react-query": "^5.17.8",
     "@tanstack/react-router": "^1.2.6",
+    "@tanstack/router-vite-plugin": "^1.4.3",
     "axios": "^1.6.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

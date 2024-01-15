@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import "./App.css";
 
-import { routeTree } from "./routes/routes.tsx";
+import { routeTree } from "./routeTree.gen.ts";
 
 const queryClient = new QueryClient();
 

@@ -1,3 +1,4 @@
+import { queryOptions } from "@tanstack/react-query";
 import axios from "axios";
 
 type PostType = {
@@ -29,3 +30,14 @@ export const fetchPost = async (postId: string) => {
 
   return post;
 };
+
+export const postsQueryOptions = queryOptions({
+  queryFn: () => fetchPosts(),
+  queryKey: ["posts"],
+});
+
+export const postQueryOptions = (postId: string) =>
+  queryOptions({
+    queryFn: () => fetchPost(postId),
+    queryKey: ["posts", { postId }],
+  });
