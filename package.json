@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@eoghanmccarthy/css-reset": "github:eoghanmccarthy/css-reset",
+    "@eoghanmccarthy/styling": "github:eoghanmccarthy/styling",
     "@tanstack/react-query": "^5.17.8",
     "@tanstack/react-router": "^1.2.6",
     "@tanstack/router-vite-plugin": "^1.4.3",

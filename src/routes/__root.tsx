@@ -11,12 +11,12 @@ export const Route = rootRouteWithContext<{
 function RootComponent() {
   return (
     <>
-      <div>
+      <nav>
         <Link activeOptions={{ exact: true }} to="/">
           Home
         </Link>{" "}
         <Link to={"/posts"}>Posts</Link>
-      </div>
+      </nav>
       <hr />
       <Outlet />
     </>
