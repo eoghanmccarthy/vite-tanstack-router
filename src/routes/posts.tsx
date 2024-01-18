@@ -4,7 +4,7 @@ import { useSuspenseQuery } from "@tanstack/react-query";
 
 import { postsQueryOptions } from "../api.ts";
 
-export const Route = new FileRoute('/posts').createRoute({
+export const Route = new FileRoute("/posts").createRoute({
   component: PostsComponent,
   loader: ({ context: { queryClient } }) =>
     queryClient.ensureQueryData(postsQueryOptions),
@@ -20,12 +20,7 @@ function PostsComponent() {
         {posts?.map((post) => {
           return (
             <li key={post.id}>
-              <Link
-                params={{
-                  postId: post.id,
-                }}
-                to="/posts/$postId"
-              >
+              <Link params={{ postId: post.id }} to="/posts/$postId">
                 <div>{post.title.slice(0, 20)}</div>
               </Link>
             </li>
