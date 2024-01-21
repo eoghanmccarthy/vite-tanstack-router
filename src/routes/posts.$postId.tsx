@@ -9,7 +9,7 @@ import { postQueryOptions } from "../api.ts";
 
 class PostNotFoundError extends Error {}
 
-export const Route = new FileRoute('/posts/$postId').createRoute({
+export const Route = new FileRoute("/posts/$postId").createRoute({
   component: PostComponent,
   errorComponent: PostErrorComponent as any,
   loader: ({ context: { queryClient }, params: { postId } }) =>

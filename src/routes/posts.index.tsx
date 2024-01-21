@@ -1,7 +1,7 @@
 import * as React from "react";
 import { FileRoute } from "@tanstack/react-router";
 
-export const Route = new FileRoute('/posts/').createRoute({
+export const Route = new FileRoute("/posts/").createRoute({
   component: PostsIndexComponent,
 });
 
